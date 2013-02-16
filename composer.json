@@ -1,0 +1,19 @@
+{
+    "name": "uri-template/uri-template",
+    "type": "library",
+    "description": "RFC 6570 URI Template processor",
+    "keywords": ["uri", "template", "url"],
+    "homepage": "http://github.com/mcrumley/uritemplate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Crumley",
+            "email": "m@michaelcrumley.com",
+            "homepage": "http://michaelcrumley.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
