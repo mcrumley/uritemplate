@@ -1,7 +1,19 @@
-uritemplate
+UriTemplate
 ===========
 
-RFC 6570 URI Template processor
+PHP [RFC 6570](http://tools.ietf.org/html/rfc6570) URI Template processor
+
+Installation
+------------
+If you use Composer, just add this to your composer.json
+
+    "uri-template/uri-template": "*"
+
+Or copy the files into your project's lib folder.
+
+Reqirements
+-----------
+UriTemplate requires PHP 5.3 or greater
 
 Examples
 --------
@@ -40,3 +52,15 @@ The static class has additional methods for getting information about the templa
     $templateErrors = UriTemplate::getErrors('http://{.url:error}{=project}'));
     echo implode(', ', $templateErrors);
     // prints Malformed varspec: ".url:error", Malformed varspec: "=project"
+
+Tests
+-----
+Each version is tested against all samples available at https://github.com/uri-templates/uritemplate-test.
+These tests are not included with the source code.
+
+License
+-------
+© Michael Crumley
+
+MIT licensed. For the full copyright and license information, please view the LICENSE
+file distributed with the source code.
