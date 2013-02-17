@@ -19,7 +19,7 @@ Examples
 --------
 
     <?php
-    use UriTemplate;
+    use UriTemplate\Processor;
     $url = new Processor('http://github.com{/project}', array(
         'project' => array('mcrumley', 'uritemplate')
     ));
@@ -38,7 +38,7 @@ Static Class
 There is also a static class that does processes templates without creating an object.
 
     <?php
-    use UriTemplate;
+    use UriTemplate\UriTemplate;
     echo UriTemplate::expand('http://github.com{/project}', array(
         'project' => array('mcrumley', 'uritemplate')
     ));
