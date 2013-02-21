@@ -183,9 +183,8 @@ private static function expandExpression($template, $variables, $keySort)
 
 private static function getExpressions($template, array $options)
 {
-    $open = self::TEMPLATE_OPEN;
-    $close = self::TEMPLATE_CLOSE;
-    extract($options, EXTR_IF_EXISTS);
+    $open = isset($options['open']) ? $options['open'] : self::TEMPLATE_OPEN;
+    $close = isset($options['close']) ? $options['close'] : self::TEMPLATE_CLOSE;
 
     // shortcut if there are no variables to expand
     if (strpos($template, $open) === false && strpos($template, $close) === false) {
