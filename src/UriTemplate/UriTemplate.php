@@ -63,7 +63,6 @@ public static function expand($template, $variables, array $options = array())
             $expression = $expressions[$i];
             if (!$expression['valid']) {
                 throw new UriTemplateException('Malformed expression: "%s" at offset %d', array($expression['complete'], $expression['offset']));
-                continue;
             }
             $sub = UriTemplate::expandExpression($expression['expression'], $variables, isset($options['keySort']) ? (bool)$options['keySort'] : false);
             $result = substr_replace($result, $sub, $expression['offset'], strlen($expression['complete']));
