@@ -161,7 +161,7 @@ private static function expandExpression($template, $variables, $keySort)
             continue;
         }
 
-        if ((is_array($value) || is_object($value)) && $varspec['prefix'] !== null) {
+        if (is_array($value) && $varspec['prefix'] !== null) {
             throw new UriTemplateException('Prefix modifier used with array value: %s', array($template));
         }
 
