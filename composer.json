@@ -13,6 +13,11 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-0" : {
+            "UriTemplate" : "src/"
+        }
+    },
     "require": {
         "php": ">=5.3.0"
     }
