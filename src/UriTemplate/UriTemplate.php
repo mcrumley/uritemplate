@@ -158,7 +158,7 @@ private static function expandExpression($template, $variables, $keySort)
                 $value = get_object_vars($value);
             }
         } else {
-            $value = null;
+            continue;
         }
 
         if ((is_array($value) || is_object($value)) && $varspec['prefix'] !== null) {
@@ -170,7 +170,7 @@ private static function expandExpression($template, $variables, $keySort)
                 return $v !== null;
             });
         }
-        if (($value !== null && count($value) !== 0) || ($value === array() && $expression['ifemp'] && $varspec['explode'] === false)) {
+        if (count($value) > 0 || ($expression['ifemp'] && $varspec['explode'] === false)) {
             $result[] = self::expandVar($expression, $varspec, $value, $keySort);
         }
     }
