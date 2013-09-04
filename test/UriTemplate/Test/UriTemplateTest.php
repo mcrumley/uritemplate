@@ -19,10 +19,10 @@ class UriTemplateTest extends \PHPUnit_Framework_TestCase
         } catch (\UriTemplate\UriTemplateException $e) {
             $actual = false;
             $errors = $e->getErrors();
-            $this->assertSame('array', gettype($errors));
+            $this->assertInternalType('array', $errors);
             $this->assertGreaterThan(0, count($errors));
         }
-        $this->assertTrue(in_array($actual, $expected));
+        $this->assertContains($actual, $expected);
     }
 
     public function getTestData()
