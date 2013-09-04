@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="test/bootstrap.php" colors="false">
+    <testsuites>
+        <testsuite name="UriTemplate Test Suite">
+            <directory>./test/UriTemplate/Test</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/UriTemplate</directory>
+        </whitelist>
+    </filter>
+</phpunit>

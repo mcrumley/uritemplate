@@ -1,0 +1,16 @@
+{
+  "Explode tests" :
+  {
+	"variables": {
+		"a": {"a": "", "b":"bee", "c": null}
+	},
+	"testcases": [
+		["{;z*=test!}", false],
+		["{+z*=test!}", false],
+		["{;a*}", ";a;b=bee"],
+		["{?a*}", "?a=&b=bee"],
+		["{&a*}", "&a=&b=bee"],
+		["{#a*}", "#a,b=bee"]
+	]
+  }
+}
