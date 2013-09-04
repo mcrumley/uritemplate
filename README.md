@@ -56,7 +56,6 @@ The static class has additional methods for getting information about the templa
 Tests
 -----
 Each version is tested against all samples available at https://github.com/uri-templates/uritemplate-test.
-These tests are not included with the source code.
 
 License
 -------
