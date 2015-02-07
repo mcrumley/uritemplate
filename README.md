@@ -5,12 +5,18 @@ PHP [RFC 6570](http://tools.ietf.org/html/rfc6570) URI Template processor
 
 Installation
 ------------
-If you use Composer, just add this to your composer.json
-```javascript
-"uri-template/uri-template": "*"
+If you use Composer, just run
+
+```bash
+composer require uri-template/uri-template
 ```
 
-Or copy the files into your project's lib folder.
+or add this to your composer.json
+```javascript
+"uri-template/uri-template": "~1.0"
+```
+
+If you do not use composer, just copy the files into your project's lib folder.
 
 Reqirements
 -----------
